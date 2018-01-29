@@ -12,9 +12,11 @@ const AppRouter = () => (
     <div>
       <Header />
       <Switch>
+        {/*exact才不會讓其他router以為自己是這個*/}
         <Route path="/" component={ExpenseDashboardPage} exact={true} />
         <Route path="/create" component={AddExpensePage} />
-        <Route path="/edit/:id" component={EditExpensePage} />
+        {/*使用冒號，讓該component可以使用props.match.params.XX存取該變數*/}
+        <Route path="/edit/:id" component={EditExpensePage} /> 
         <Route path="/help" component={HelpPage} />
         <Route component={NotFoundPage} />
       </Switch>

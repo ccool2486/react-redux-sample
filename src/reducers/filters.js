@@ -19,7 +19,7 @@ export default (state = filtersReducerDefaultState, action) => {
     case 'SORT_BY_AMOUNT':
       return {
         ...state,
-        sortBy: 'amount'
+        sortBy: 'amount' // 這邊只是換字串，可以以金額或是時間來排序
       };
     case 'SORT_BY_DATE':
       return {

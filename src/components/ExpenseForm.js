@@ -7,12 +7,13 @@ export default class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
 
+    // 如果有props傳進來，就顯示出來
     this.state = {
       description: props.expense ? props.expense.description : '',
       note: props.expense ? props.expense.note : '',
       amount: props.expense ? (props.expense.amount / 100).toString() : '',
       createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
-      calendarFocused: false,
+      calendarFocused: false, //  react-dates需要
       error: ''
     };
   }
@@ -86,7 +87,7 @@ export default class ExpenseForm extends React.Component {
             onChange={this.onNoteChange}
           >
           </textarea>
-          <button>Add Expense</button>
+          <button>Add Expense</button> {/*這邊沒有呼叫的原因，是因為在上一層呼叫了*/}
         </form>
       </div>
     )
