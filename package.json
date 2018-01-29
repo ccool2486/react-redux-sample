@@ -35,7 +35,10 @@
     "uuid": "3.1.0",
     "validator": "8.0.0",
     "webpack": "3.1.0",
-    "webpack-dev-server": "2.5.1"
+    "webpack-dev-server": "2.5.1",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   },
   "repository": "https://github.com/ccool2486/react-redux-sample.git"
 }
