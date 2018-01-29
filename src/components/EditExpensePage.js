@@ -6,18 +6,16 @@ import { editExpense, removeExpense } from '../actions/expenses';
 const EditExpensePage = (props) => {
   return (
     <div>
-      {/*編輯表單*/}
       <ExpenseForm
-        expense={props.expense} {/*抓出來，方便後面使用*/}
+        expense={props.expense} 
 
-        {/*修改開支*/}
         onSubmit={(expense) => {
           props.dispatch(editExpense(props.expense.id, expense));
-          props.history.push('/'); {/*使用props.history.push來跳頁*/}
+          props.history.push('/');
         }}
       />
 
-      {/*移除開支*/}
+
       <button onClick={() => {
         props.dispatch(removeExpense({ id: props.expense.id }));
         props.history.push('/');
